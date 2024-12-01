@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*VARS*/
+
+:root{
+    --nav0-color: #FF6001;
+    --nav1-color: #EFF2F9;
+    --nav2-color: #000000;
+    --nav3-color: #ff6001;
+    --footer1-color: #F1F1F1;
+    --footer2-color: #D6D6D6;
+    --footer3-color: #FFFFFF;
+    --footer4-color: #333333;
+    --font-family: "Roboto Condensed", sans-serif;
+    --otext: #FF6001;
+}
+
+/*COMUNES*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+a {text-decoration: none;}
+ul {list-style: none;}
+
+/*HEADER*/
+ header > .nav0 {
+    background-color: var(--nav0-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: auto;
+    align-items: center;
+    position: sticky;
+    p {color: white;}
+    a {
+        color: white;
+        text-decoration: underline;
+        text-transform:uppercase;
+    }
+    .button {
+        border: none;
+        background-color: var(--nav0-color);
+        color: black;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+}
+
+header > .nav0 > div > .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > .nav1 {
+    background-color: var(--nav1-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    gap: 20px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+
+header > .nav1 > div > .logo {
+    height: 60px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+header > .nav1 > div > .searcher {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-self: start;
+}
+
+header > .nav1 > .searcher > input {
+    border-radius: 5px;
+    width: 500px;
+    min-width: 150px;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    padding-left: 15px;
+  }
+
+  header > .nav1 > .searcher > img {
+    border-radius: 10%;
+    height: 50px;
+    width: 50px;
+    min-width:60px;
+    cursor: pointer;
+  }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+ /*
+ <body>
+    <header>
+        <nav class="nav1">
+            <div class="logo"></div>
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/logoHSNReduced.svg" alt="logoHSN">            
+            </div>
+            <div>
+                <input type="search" placeholder="Buscar por: Producto, Objetivo, Ingrediente...">
+                <img src="assets/search.png" alt="finder">
+            </div>
+            <div class="stars">
+                <img src="assets/stars.webp" alt="stars">
+                <p><strong>Excelente</strong> - Trustpilot</p>
+                <p>4.70/5.00</p>
+            </div>
+            <div class="Shopping">
+                <p><strong>0</strong></p>
+                <img src="assets/ShoppingBag.png" alt="bag">
+            </div>
+        </nav>
+        <nav class="nav2">
+            <ul class="list1">
+                <li><a href="https://www.hsnstore.com/nutricion-deportiva">NUTRCICIÓN DEPORTIVA</a></li>
+                <li><a href="https://www.hsnstore.com/salud-bienestar">SALUD Y BIENESTAR</a></li>
+                <li><a href="https://www.hsnstore.com/alimentacion-saludable">ALIMENTACÓN</a></li>
+                <li><a href="https://www.hsnstore.com/accesorios-deportivos">ACCESORIOS</a></li>
+                <li><a href="https://www.hsnstore.com/marcas">MARCAS</a></li>
+            </ul>
+            <ul class="list2">
+                <li><a href="https://www.hsnstore.com/top-ventas">TOP VENTAS</a></li>
+                <li><a href="https://www.hsnstore.com/promociones">PROMOCIONES</a></li>
+                <li><a href="https://www.hsnstore.com/novedades">NOVEDADES</a></li>
+                <li><a href="https://www.hsnstore.com/promociones/black-friday">BLACK FRIDAY</a></li>
+            </ul>
+        </nav>
+        <article class="message">
+            <h2><em>50% DTO Directo</em> en SportSeres & KetoSeries + <em>Creatina GRATIS</em> para pedidos de +45€</h2>
+            <h3>TIEMPO RESTANTE: 03 HORAS : 54 MINS : 37 SEGS</h3>
+        </article>
+    </header>
+    <main>
+        <figure class="MainImg">
+            <img src="https://www.hsnstore.com/media/interaktingslider/interaktingslider_es-25-lunes-50sport-keto-11-2024_12.webp" alt="BlackFriday">
+        </figure>
+        <h3>PRODUCTOS RECOMENDADOS</h3>
+        <section id="products"></section>
+    </main>
+    <article class="Article-Opinions">
+        <strong class="Article-Title">Tienda Online de Nutrición Deportiva, Dietética Natural y Accesorios</strong>
+        <p>¿Eres deportista y sabes que la mejor versión de ti mismo está aún por llegar? ¿Llevas o quieres seguir un estilo de vida saludable? Prepárate porque vas a ser <strong>de los miles de clientes HSN. Comprobarás cómo la distancia que te separa de tus objetivos se acorta.</strong></p>
+        <p>Somos la tienda online de Nutrición Deportiva y Dietética Natural líder. Para nosotros tú eres el centro de todo. En HSN vas a encontrar un equipo con el que vas a identificarte, pues nuestro esfuerzo por cruzar la delgada línea entre lo notable y lo sobresaliente no entiende de límites.</p>
+
+        <strong class="Article-Title">¿Quiénes somos y qué podemos aportarte?</strong>
+        <p>mpulsados por la experiencia de más de una década a tu servicio, caracterizada por la constante búsqueda de la excelencia, te presentamos <strong>la mejor selección de productos de nutrición deportiva y alimentación saludable del mercado, con independencia de cuál sea tu disciplina deportiva u objetivo.</strong>
+        <p>Solo podemos invitarte a que compruebes las increíbles virtudes de todos nuestros productos: eficacia, sabor y textura de las fórmulas de nuestras proteínas (con Whey Protein a la cabeza) creatinas, aminoácidos de altura (como BCAA’s), productos BIO... <strong>¡Y todo lo que tenga que ver con el interés incesante por el cuidado de la salud!</strong></p>
+        <p>¿Cuál es nuestro objetivo? Llevar la Marca HSN a lo más alto y ofrecerte la mayor variedad de Nutrición Deportiva y Dietética Natural y, por último, pero no por eso menos importante, los mejores precios.</p>
+        <p>En HSN diseñamos, creamos y seleccionamos los mejores suplementos y alimentos naturales con los que puedes conseguir tus objetivos deportivos y ayudarte a llevar una vida más saludable.</p>   
+        <strong>¡Únete a HSN para una alianza legendaria en el sector del fit-food!</strong>
+    </article>∫
+    <strong>HABLAN DE NOSOTROS</strong>
+    <section class="Opinions">
+        <a href="https://elpais.com/sociedad/2021-06-28/proteinas-vitaminas-como-afrontar-el-entrenamiento-con-garantias.html"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/distribuidores-hsn/imagen-el-pais.webp" alt="EL PAIS"></a>
+        <a href="https://www.elmundo.es/uestudio/2021/06/28/60d9c038e4d4d8230b8b460c.html"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/distribuidores-hsn/imagen-el-mundo.webp" alt="EL MUNDO"></a>
+        <a href="https://www.sportlife.es/noticias/hsn-nuevo-patrocinador-tecnico-world-padel-tour_272467_102.html"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/distribuidores-hsn/imagen-sport-life.webp" alt="SPORTSLIFE"></a>
+        <a href="https://www.europapress.es/deportes/noticia-adriana-cerezo-paris-voy-ir-conseguir-sueno-tokio-quedo-tan-cerca-20221130124834.html"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/distribuidores-hsn/imagen-europa-press.webp" alt="EUROPAPRESS"></a>
+        <a href="https://www.marca.com/radio/2021/09/17/6144b4ad46163f9c6a8b45f8.html"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/distribuidores-hsn/imagen-marca.webp" alt="MARCA"></a>
+    </section>
+    <footer>
+        <div class="footer1">
+            <div class="footer1-1">
+                <img src="https://www.hsnstore.com/skin/frontend/base/default/images/footer/Entrega.svg" alt="Envíos">
+                <h4>ENVÍOS GRATIS Y RÁPIDOS</h4>
+                <p>Envío rapidísimo en 24/48 horas y gratis a partir de 29,99€</p>
+            </div>
+            <div class="footer1-2">
+                <img src="https://www.hsnstore.com/skin/frontend/base/default/images/footer/Garantia.svg" alt="Calidad">
+            <h4>MÁXIMA CALIDAD</h4>
+            <p>Desarrollado por nuestro equipo de I+D+I y fabricado en nuestra propia fábrica</p>
+            </div>
+            <div class="footer1-3">
+                <img src="https://www.hsnstore.com/skin/frontend/base/default/images/footer/Medioambiente.svg" alt="Sostenibilidad">
+                <h4>SOSTENIBILIDAD</h4>
+                <p>Mejoramos progresivamente los procesos existentes para reducir nuestra huella medioambiental</p>
+            </div>
+            <div class="footer1-4">
+                <img src="https://www.hsnstore.com/skin/frontend/base/default/images/footer/Materias.svg" alt="Materias">
+                <h4>MATERIAS PRIMAS PREMIUM</h4>
+                <p>Utilizamos las mejores materias primas probadas y reconocidas por certificados de calidad</p>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="footer2-1">
+                <h4>NEWSLETTER</h4>
+                <p>Mantente al día de nuestras Ofertas y Novedades</p>
+                <form action="Newsletter.php" method="post">
+                    <input type="email" name="email" placeholder="Introduce tu email aquí">
+                    <input type="submit" value="Enviar">
+                </form>
+                <form action="Politics.php" method="post">
+                    <input type="checkbox" name="check">
+                    <p>He leído y acepto la <a href="https://www.hsnstore.com/politica-de-privacidad#formulario-newsletter">Políitica de Privacidad</a></p>
+                </form>
+            </div>
+            <div class="footer2-2">
+                <h5>FABRICACIÓN PROPIA</h5>
+                <a href="https://www.hsnstore.com/media/wysiwyg/analysis/hsn-ifs-food-certificate-renewal-2023-2024_1.pdf"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/sellos-calidad/Ifs_icon.png"></a>
+                <a href="https://www.hsnstore.com/media/wysiwyg/analysis/certificate-haccp-2023-2024-hsn_1.pdf"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/sellos-calidad/Haccp_icon.png"></a>
+                <a href="https://www.hsnstore.com/media/wysiwyg/analysis/certificate-gmp-2023-2024-hsn_1.pdf"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/sellos-calidad/Gmp_icon.png"></a>
+                <a href="https://www.hsnstore.com/garantia-calidad-hsn#certificado-iso-8"><img src="https://www.hsnstore.com/media/wysiwyg/cms-images/sellos-calidad/Iso_icon.png"></a>
+            </div>
+        </div>
+        <div class="footer3">
+            <div class="footer3-1">
+                <p>MÉTODOS DE PAGO</p>
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_payment_logos/ES-mastercard.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_payment_logos/ES-visa.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_payment_logos/ES-maestro.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_payment_logos/ES-amazon.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_payment_logos/ES-redsys.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_payment_logos/ES-cashondelivery.jpg">
+            </div>
+            <div class="footer3-2">
+                <p>MÉTODOS DE ENVÍO</p>
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_shipping_logos/ES-correos.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_shipping_logos/ES-correosexpress.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_shipping_logos/ES-gls.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_shipping_logos/ES-fedex.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_shipping_logos/ES-mrw.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_shipping_logos/ES-spring.jpg">
+            </div>
+            <div class="footer3-3">
+                <p>SEGURIDAD WEB</p>
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_web_security/DMCA.jpg">
+                <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/footer_web_security/Geotrust.jpg">
+            </div>
+        </div>
+        <div class="footer4">
+            <img src="https://www.hsnstore.com/skin/frontend/default/hsnreborn/images/hsnWhite.svg" alt="HSN">
+            <p>Copyright © 2024 HSN Store. Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
